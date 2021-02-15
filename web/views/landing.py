@@ -18,3 +18,21 @@ class LandingAboutUsView(View):
 
     def get(self, request):
         return render(request, self.template_name, {})
+
+class LandingGalleryView(View):
+    '''
+    Vista de la pagina Home
+    '''
+    template_name = 'landing/gallery.html'
+
+    def get(self, request):
+        return render(request, self.template_name, {})
+
+class LandingContactView(View):
+    '''
+    Vista de la pagina Home
+    '''
+    template_name = 'landing/contact.html'
+
+    def get(self, request):
+        return render(request, self.template_name, {})
