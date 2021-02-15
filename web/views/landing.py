@@ -9,3 +9,12 @@ class LandingIndexView(View):
 
     def get(self, request):
         return render(request, self.template_name, {})
+
+class LandingAboutUsView(View):
+    '''
+    Vista de la pagina Home
+    '''
+    template_name = 'landing/about-us.html'
+
+    def get(self, request):
+        return render(request, self.template_name, {})
