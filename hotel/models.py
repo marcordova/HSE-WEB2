@@ -33,10 +33,11 @@ class Room(models.Model):
         return 'R:{} -> T:{}'.format(self.number, self.type.name)
 
 class Client(models.Model):
+    document = models.CharField( max_length = 100, verbose_name = 'Número de documento de identidad')
     name = models.CharField(max_length = 100, verbose_name = 'Nombre')
     lastname = models.CharField(max_length = 100, verbose_name = 'Apellido')
-    document = models.CharField(max_length = 100, verbose_name = 'Número de documento de identidad')
-    email = models.CharField(max_length = 100, verbose_name = 'Correo electrónico')
+    
+    email = models.CharField(max_length = 100, verbose_name = 'Correo electrónico', primary_key=document)
     password = models.CharField( max_length = 100, verbose_name = 'Contrasenia')
     created_on=models.DateTimeField(auto_now_add=True)
     updated_on= models.DateTimeField(auto_now=True)

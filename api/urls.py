@@ -8,6 +8,7 @@ from api import views
 router = routers.DefaultRouter()
 router.register(r'type', views.TypeViewSet)
 router.register(r'room', views.RoomViewSet)
+router.register(r'client', views.ClientViewSet)
 
 urlpatterns = [
     path(r'', include(router.urls)),
